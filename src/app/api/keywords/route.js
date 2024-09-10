@@ -1,4 +1,4 @@
-import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {authOptions} from "@/libs/authOptions";
 import {doGoogleSearch} from "@/libs/rankingFunctions";
 import {Keyword} from "@/models/Keyword";
 import mongoose from "mongoose";
