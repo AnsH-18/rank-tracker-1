@@ -7,7 +7,7 @@ export async function POST(req) {
   mongoose.connect(process.env.MONGODB_URI);
   const data = await req.json();
   const response_id = data.response_id;
-  const url = 'https://api.brightdata.com/serp/get_result?output=json&customer=hl_57784e4b&zone=ranktracker&response_id=' + response_id;
+  const url = 'https://api.brightdata.com/unblocker/get_result?customer=hl_7799d4b1&zone=serp_api1&response_id=' + response_id;
   const headers = {'Authorization': 'Bearer '+process.env.BRIGHTDATA_API_KEY};
   console.log('Fetching result for:'+response_id);
   const response = await axios.get(url, {headers});
